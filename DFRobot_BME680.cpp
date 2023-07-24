@@ -136,15 +136,33 @@ float DFRobot_BME680::readTemperature(void)
 }
 
 
+uint32_t DFRobot_BME680::readTemperatureRAW(void)
+{
+  return bme680_data.raw_temperature;
+}
+
+
 float DFRobot_BME680::readPressure(void)
 {
   return bme680_data.pressure;
 }
 
 
+uint32_t DFRobot_BME680::readPressureRAW(void)
+{
+  return bme680_data.raw_pressure;
+}
+
+
 float DFRobot_BME680::readHumidity(void)
 {
   return bme680_data.humidity;
+}
+
+
+uint16_t DFRobot_BME680::readHumidityRAW(void)
+{
+  return bme680_data.raw_humidity;
 }
 
 
@@ -164,6 +182,18 @@ float DFRobot_BME680::readCalibratedAltitude(float seaLevel)
 float DFRobot_BME680::readGasResistance(void)
 {
   return bme680_data.gas_resistance;
+}
+
+
+uint16_t DFRobot_BME680::readGasResistanceRAW(void)
+{
+  return bme680_data.raw_gas_resistance;
+}
+
+
+uint8_t DFRobot_BME680::readGasRange(void)
+{
+  return bme680_data.raw_gas_range;
 }
 
 

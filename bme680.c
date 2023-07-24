@@ -891,6 +891,12 @@ static int8_t read_field_data(struct bme680_field_data *data, struct bme680_dev 
 				data->pressure = calc_pressure(adc_pres, dev);
 				data->humidity = calc_humidity(adc_hum, dev);
 				data->gas_resistance = calc_gas_resistance(adc_gas_res, gas_range, dev);
+
+				data->raw_temperature = adc_temp;
+				data->raw_pressure = adc_pres;
+				data->raw_humidity = adc_hum;
+				data->raw_gas_resistance = adc_gas_res;
+				data->raw_gas_range = gas_range;
 				break;
 			}
 			/* Delay to poll the data */

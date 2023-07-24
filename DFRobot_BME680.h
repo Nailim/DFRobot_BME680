@@ -92,6 +92,13 @@ public:
    */
   float readTemperature(void);
   /**
+   * @fn readTemperatureRAW
+   * @brief read the raw ADC temperature value
+   *
+   * @return raw adc temperature value, uint32
+   */
+  uint32_t readTemperatureRAW(void);
+  /**
    * @fn readPressure
    * @brief read the pressure value (unit pa)
    *
@@ -99,11 +106,24 @@ public:
    */
   float readPressure(void);
   /**
+   * @fn readPressureRAW
+   * @brief read the raw ADC pressure value
+   *
+   * @return raw adc pressure value, uint32
+   */
+  uint32_t readPressureRAW(void);
+  /**
    * @fn readHumidity
    * @brief read the humidity value (unit %rh)
    * @return humidity value, this value has two decimal points
    */
   float readHumidity(void);
+  /**
+   * @fn readHumidityRAW
+   * @brief read the raw ADC humidity value
+   * @return raw adc humidity value, uint16
+   */
+  uint16_t readHumidityRAW(void);
   /**
    * @fn readAltitude
    * @brief read the altitude (unit meter)
@@ -125,6 +145,18 @@ public:
    * @return temperature value, this value has two decimal points
    */
   float readGasResistance(void);
+  /**
+   * @fn readGasResistanceRAW
+   * @brief read the raw ADC gas resistance
+   * @return raw adc gas resistance value, uint16
+   */
+  uint16_t readGasResistanceRAW(void);
+  /**
+   * @fn readGasRange
+   * @brief read the gas range
+   * @return gas range value, uint8
+   */
+  uint8_t readGasRange(void);
   /**
    * @fn readSeaLevel
    * @brief read normalised atmospheric pressure (unit pa)

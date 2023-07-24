@@ -328,6 +328,12 @@ struct	bme680_field_data {
 	uint32_t pressure;       /**< Pressure in Pascal */
 	uint32_t humidity;       /**< Humidity in % relative humidity x1000 */
 	uint32_t gas_resistance; /**< Gas resistance in Ohms */
+
+	uint32_t raw_temperature;/**< Raw ADC values for temperature */
+	uint32_t raw_pressure;   /**< Raw ADC values for pressure */
+	uint16_t raw_humidity;   /**< Raw ADC values for humidity */
+	uint16_t raw_gas_resistance;   /**< Raw ADC values for gas resistance */
+	uint8_t raw_gas_range;   /**< Raw values for gas range */
 };
 
 /**
