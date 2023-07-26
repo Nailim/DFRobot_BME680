@@ -193,6 +193,12 @@ public:
    * @retval 1 :not ready
    */
   uint8_t isIAQReady(void);
+  /**
+   * @fn DgetCalibrationData
+   * @brief read calibration data from sensor
+   * @return return bme680_calib_data struct with calibration values
+   */
+  bme680_calib_data getCalibrationData(void);
   
   private:
     void          writeParamHelper(uint8_t reg, uint8_t dat, uint8_t addr);

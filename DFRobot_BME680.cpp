@@ -236,6 +236,12 @@ uint8_t DFRobot_BME680::isIAQReady(void)
 }
 
 
+bme680_calib_data DFRobot_BME680::getCalibrationData(void)
+{
+  return bme680_sensor.calib;
+}
+
+
 void DFRobot_BME680::writeParamHelper(uint8_t reg, uint8_t dat, uint8_t addr)
 {
   uint8_t       var1 = 0;
