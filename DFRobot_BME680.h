@@ -194,7 +194,7 @@ public:
    */
   uint8_t isIAQReady(void);
   /**
-   * @fn DgetCalibrationData
+   * @fn getCalibrationData
    * @brief read calibration data from sensor
    * @return return bme680_calib_data struct with calibration values
    */
