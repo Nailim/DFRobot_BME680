@@ -1,3 +1,7 @@
+# ABOUT
+
+Fork of DFRobot/DFRobot_BME680 with exposed raw ADC data from the sensor.
+
 # DFRobot_BME680
 
 * [中文版](./README_CN.md)
@@ -70,6 +74,13 @@ Download the zip file first to use this library and uncompress it to a folder na
    */
   float readTemperature(void);
   /**
+   * @fn readTemperatureRAW
+   * @brief read the raw ADC temperature value
+   *
+   * @return raw adc temperature value, uint32
+   */
+  uint32_t readTemperatureRAW(void);
+  /**
    * @fn readPressure
    * @brief read the pressure value (unit pa)
    *
@@ -77,11 +88,24 @@ Download the zip file first to use this library and uncompress it to a folder na
    */
   float readPressure(void);
   /**
+   * @fn readPressureRAW
+   * @brief read the raw ADC pressure value
+   *
+   * @return raw adc pressure value, uint32
+   */
+  uint32_t readPressureRAW(void);
+  /**
    * @fn readHumidity
    * @brief read the humidity value (unit %rh)
    * @return humidity value, this value has two decimal points
    */
   float readHumidity(void);
+  /**
+   * @fn readHumidityRAW
+   * @brief read the raw ADC humidity value
+   * @return raw adc humidity value, uint16
+   */
+  uint16_t readHumidityRAW(void);
   /**
    * @fn readAltitude
    * @brief read the altitude (unit meter)
@@ -103,6 +127,18 @@ Download the zip file first to use this library and uncompress it to a folder na
    * @return temperature value, this value has two decimal points
    */
   float readGasResistance(void);
+  /**
+   * @fn readGasResistanceRAW
+   * @brief read the raw ADC gas resistance
+   * @return raw adc gas resistance value, uint16
+   */
+  uint16_t readGasResistanceRAW(void);
+  /**
+   * @fn readGasRange
+   * @brief read the gas range
+   * @return gas range value, uint8
+   */
+  uint8_t readGasRange(void);
   /**
    * @fn readSeaLevel
    * @brief read normalised atmospheric pressure (unit pa)
@@ -139,6 +175,12 @@ Download the zip file first to use this library and uncompress it to a folder na
    * @retval 1 :not ready
    */
   uint8_t isIAQReady(void);
+  /**
+   * @fn getCalibrationData
+   * @brief read calibration data from sensor
+   * @return return bme680_calib_data struct with calibration values
+   */
+  bme680_calib_data getCalibrationData(void);
 
 ```
 
