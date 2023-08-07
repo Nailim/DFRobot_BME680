@@ -43,6 +43,10 @@ void setup()
 void loop()
 {
   static uint8_t       calibrated = 0;
+
+  bme.startConvert();
+  delay(1000);
+  bme.update();
   
   #ifdef CALIBRATE_PRESSURE
   if(calibrated == 0) {
